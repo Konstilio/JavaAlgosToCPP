@@ -11,7 +11,6 @@
 
 #include <vector>
 #include <ostream>
-#include <memory.h>
 using namespace std;
 
 class Vertex {
@@ -20,10 +19,11 @@ private:
     
     int data = 0;
     bool visited = false;
-    vector<shared_ptr<Vertex>> neighbours;
+    vector<Vertex *> neighbours;
     
 public:
     Vertex(int data);
+	~Vertex();
     
     int getData() const;
     void setData(int data);
@@ -31,9 +31,8 @@ public:
     bool isVisited() const;
     void setVisited(bool visited);
     
-    const vector<shared_ptr<Vertex>> &getNeighbourList() const;
-    
-    void addNeighbour(const shared_ptr<Vertex> &neighbour);
+    const vector<Vertex *> &getNeighbourList() const;
+    void addNeighbour(Vertex *neighbour);
     
     friend ostream &operator<<(ostream &os, const Vertex &vertex);
 };

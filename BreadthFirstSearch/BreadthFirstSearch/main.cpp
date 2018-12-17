@@ -22,10 +22,10 @@ int main(int argc, const char * argv[]) {
     shared_ptr<Vertex> vertex4 = make_shared<Vertex>(4);
     shared_ptr<Vertex> vertex5 = make_shared<Vertex>(5);
     
-    vertex1->addNeighbour(vertex2);
-    vertex1->addNeighbour(vertex4);
-    vertex4->addNeighbour(vertex5);
-    vertex2->addNeighbour(vertex3);
+    vertex1->addNeighbour(vertex2.get());
+    vertex1->addNeighbour(vertex4.get());
+    vertex4->addNeighbour(vertex5.get());
+    vertex2->addNeighbour(vertex3.get());
     
     breadthFirstSearch(vertex1);
     

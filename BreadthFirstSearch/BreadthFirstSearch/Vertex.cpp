@@ -7,9 +7,15 @@
 //
 
 #include "Vertex.h"
+#include <iostream>
 
 Vertex::Vertex(int data) {
     this->data = data;
+}
+
+Vertex::~Vertex()
+{
+	std::cout << "delete vertex " << data << '\n';
 }
 
 int Vertex::getData() const
@@ -30,11 +36,11 @@ void Vertex::setVisited(bool visited) {
     this->visited = visited;
 }
 
-const vector<shared_ptr<Vertex>> &Vertex::getNeighbourList() const {
+const vector<Vertex *> &Vertex::getNeighbourList() const {
     return neighbours;
 }
 
-void Vertex::addNeighbour(const shared_ptr<Vertex> &neighbour)
+void Vertex::addNeighbour(Vertex *neighbour)
 {
     neighbours.push_back(neighbour);
 }

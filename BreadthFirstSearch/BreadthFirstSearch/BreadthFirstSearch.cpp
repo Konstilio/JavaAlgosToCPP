@@ -10,17 +10,17 @@
 
 void BreadthFirstSearch::operator()(shared_ptr<Vertex> root) const {
     
-    std::deque<shared_ptr<Vertex>> queue;
+    std::deque<Vertex *> queue;
     root->setVisited(true);
-    queue.push_back(root);
+    queue.push_back(root.get());
     
     while(!queue.empty()){
         
-        shared_ptr<Vertex> actualVertex = queue.front();
+		Vertex *actualVertex = queue.front();
         queue.pop_front();
         cout << *actualVertex << ' ';
         
-        for(shared_ptr<Vertex> v : actualVertex->getNeighbourList() ){
+        for(Vertex *v : actualVertex->getNeighbourList() ){
             if(!v->isVisited() ){
                 v->setVisited(true);
                 queue.push_back(v);

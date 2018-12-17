@@ -1,0 +1,6 @@
+cmake_minimum_required (VERSION 2.6)
+project (BreadthFirstSearch)
+set(CMAKE_CXX_STANDARD 11)
+include_directories(BreadthFirstSearch)
+set(SOURCES BreadthFirstSearch/main.cpp BreadthFirstSearch/main.cpp BreadthFirstSearch/BreadthFirstSearch.cpp BreadthFirstSearch/BreadthFirstSearch.h BreadthFirstSearch/Vertex.h BreadthFirstSearch/Vertex.cpp)
+add_executable(BreadthFirstSearch ${SOURCES})
