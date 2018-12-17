@@ -28,7 +28,7 @@ public:
     void printVertices() const;
     
 private:
-    void dfs(shared_ptr<Vertex> vertex);
+    void dfs(Vertex *vertex);
 };
 
 

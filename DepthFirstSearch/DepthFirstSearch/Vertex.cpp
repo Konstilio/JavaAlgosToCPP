@@ -33,11 +33,11 @@ void Vertex::setVisited(bool visited) {
     this->visited = visited;
 }
 
-const vector<shared_ptr<Vertex>> &Vertex::getNeighbourList() const {
+const vector<Vertex *> &Vertex::getNeighbourList() const {
     return neighbours;
 }
 
-void Vertex::addNeighbour(const shared_ptr<Vertex> &neighbour)
+void Vertex::addNeighbour(Vertex *neighbour)
 {
     neighbours.push_back(neighbour);
 }

@@ -11,7 +11,6 @@
 
 #include <vector>
 #include <ostream>
-#include <memory.h>
 #include <string>
 using namespace std;
 
@@ -21,7 +20,7 @@ private:
     
     string name = 0;
     bool visited = false;
-    vector<shared_ptr<Vertex>> neighbours;
+    vector<Vertex *> neighbours;
     int startingRank = -1;
     int finishingRank = -1;
     
@@ -35,8 +34,8 @@ public:
     bool isVisited() const;
     void setVisited(bool visited);
     
-    const vector<shared_ptr<Vertex>> &getNeighbourList() const;
-    void addNeighbour(const shared_ptr<Vertex> &neighbour);
+    const vector<Vertex *> &getNeighbourList() const;
+    void addNeighbour(Vertex *neighbour);
     
     void setStartingRank(int startingRank);
     int getStartingRank() const;

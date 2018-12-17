@@ -22,10 +22,10 @@ int main(int argc, const char * argv[]) {
     graph[3] = make_shared<Vertex>("4");
     graph[4] = make_shared<Vertex>("5");
     
-    graph[0]->addNeighbour(graph[1]);
-    graph[0]->addNeighbour(graph[3]);
-    graph[3]->addNeighbour(graph[4]);
-    graph[1]->addNeighbour(graph[2]);
+    graph[0]->addNeighbour(graph[1].get());
+    graph[0]->addNeighbour(graph[3].get());
+    graph[3]->addNeighbour(graph[4].get());
+    graph[1]->addNeighbour(graph[2].get());
     
     DepthFirstSearch depthFirstSearch(graph);
     depthFirstSearch();

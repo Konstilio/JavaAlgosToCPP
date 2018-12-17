@@ -18,19 +18,19 @@ void DepthFirstSearch::operator()()
     for (auto vertex : vertexList )
     {
         if(!vertex->isVisited() )
-            dfs(vertex);
+            dfs(vertex.get());
     }
     cout << '\n';
 }
 
-void DepthFirstSearch::dfs(shared_ptr<Vertex> vertex){
+void DepthFirstSearch::dfs(Vertex *vertex){
     
     cout << vertex->getName() << "-";
     
     time++;
     vertex->setStartingRank(time);
     
-    for( auto v : vertex->getNeighbourList() ){
+    for(Vertex *v : vertex->getNeighbourList() ){
         if(!v->isVisited() ){
             v->setVisited(true);
             dfs(v);
