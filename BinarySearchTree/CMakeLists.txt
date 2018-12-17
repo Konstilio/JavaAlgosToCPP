@@ -1,5 +1,6 @@
 cmake_minimum_required (VERSION 2.6)
 project (BinarySearchTree)
-include_directories(BinarySearchTree)
 set(CMAKE_CXX_STANDARD 11)
-add_executable(BinarySearchTree BinarySearchTree/main.cpp BinarySearchTree/Person.cpp)
+include_directories(BinarySearchTree)
+set(SOURCES BinarySearchTree/main.cpp BinarySearchTree/main.cpp BinarySearchTree/Person.cpp BinarySearchTree/BinarySearchTree.h BinarySearchTree/Tree.h BinarySearchTree/Person.h)
+add_executable(BinarySearchTree ${SOURCES})

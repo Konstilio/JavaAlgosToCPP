@@ -2,5 +2,10 @@
 *.pbxproj
 *.plist
 *.xcuserstate
+*.sln
+*.user
+*vcxproj*
 *xcodeproj*
 */.vs/*
+*/build/*
+Debug/

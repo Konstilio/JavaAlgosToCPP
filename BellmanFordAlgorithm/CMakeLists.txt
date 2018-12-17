@@ -1,5 +1,6 @@
 cmake_minimum_required (VERSION 2.6)
 project (BellmanFordAlgorithm)
-include_directories(BellmanFordAlgorithm)
 set(CMAKE_CXX_STANDARD 11)
-add_executable(BellmanFordAlgorithm BellmanFordAlgorithm/main.cpp BellmanFordAlgorithm/BellmanFord.cpp BellmanFordAlgorithm/Edge.cpp BellmanFordAlgorithm/Vertex.cpp)
+include_directories(BellmanFordAlgorithm)
+set(SOURCES BellmanFordAlgorithm/main.cpp BellmanFordAlgorithm/BellmanFord.cpp BellmanFordAlgorithm/BellmanFord.h BellmanFordAlgorithm/Edge.cpp BellmanFordAlgorithm/Edge.h BellmanFordAlgorithm/Vertex.cpp BellmanFordAlgorithm/Vertex.h)
+add_executable(BellmanFordAlgorithm ${SOURCES})
