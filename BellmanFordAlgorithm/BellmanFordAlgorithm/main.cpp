@@ -32,5 +32,6 @@ int main(int argc, const char * argv[]) {
     
     BellmanFord bellmannFordAlgorithm = BellmanFord(vertexList,edgeList);
     bellmannFordAlgorithm(4, 3);
+	std::cin.get();
     return 0;
 }

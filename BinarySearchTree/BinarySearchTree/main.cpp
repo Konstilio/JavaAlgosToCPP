@@ -20,7 +20,6 @@ int main(int argc, const char * argv[]) {
     bst->insert(Person("Smith",11));
     
     bst->traversal();
-    return 0;
-    
+	std::cin.get();
     return 0;
 }

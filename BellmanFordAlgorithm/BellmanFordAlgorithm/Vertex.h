@@ -21,7 +21,7 @@ private:
     int id;
     bool visited;
     int minDistance = INT_MAX;
-    Vertex *previousVertex;
+    Vertex *previousVertex = nullptr;
     
 public:
     Vertex(int id);

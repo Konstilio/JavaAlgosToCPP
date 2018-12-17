@@ -3,3 +3,4 @@
 *.plist
 *.xcuserstate
 *xcodeproj*
+*/.vs/*
