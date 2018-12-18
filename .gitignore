@@ -4,6 +4,9 @@
 *.xcuserstate
 *.sln
 *.user
+*.suo
+*.VC.db
+*.ipch
 *vcxproj*
 *xcodeproj*
 */.vs/*
