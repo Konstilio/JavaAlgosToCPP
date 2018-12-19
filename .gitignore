@@ -7,6 +7,7 @@
 *.suo
 *.VC.db
 *.ipch
+*.exe
 *vcxproj*
 *xcodeproj*
 */.vs/*

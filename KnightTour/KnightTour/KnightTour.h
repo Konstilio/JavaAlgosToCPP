@@ -5,8 +5,8 @@ using std::vector;
 class KnightTour
 {
 	vector<vector<int>> solutionMatrix;
-	constexpr static std::array<int, 8> xMoves = { 2, 1, -1, -2, -2, -1, 1, 2 };
-	constexpr static std::array<int, 8> yMoves = { 1, 2, 2, 1, -1, -2, -2, -1 };
+	const static std::array<int, 8> xMoves;
+	const static std::array<int, 8> yMoves;
 
 	constexpr static int BOARD_SIZE = 7;
 
