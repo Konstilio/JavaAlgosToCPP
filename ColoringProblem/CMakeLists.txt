@@ -1,0 +1,6 @@
+cmake_minimum_required (VERSION 2.6)
+project (ColoringProblem)
+set(CMAKE_CXX_STANDARD 11)
+include_directories(ColoringProblem)
+set(SOURCES ColoringProblem/main.cpp ColoringProblem/GraphColoring.cpp ColoringProblem/GraphColoring.cpp)
+add_executable(ColoringProblem ${SOURCES})

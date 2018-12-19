@@ -10,9 +10,9 @@
 using std::vector;
 
 class GraphColoring {
+	vector<vector<int>> graphMatrix;
     int numOfColors;
     vector<int> colors;
-    vector<vector<int>> graphMatrix;
   
 public:
     GraphColoring(const vector<vector<int>> &graph, int _numOfColors);
