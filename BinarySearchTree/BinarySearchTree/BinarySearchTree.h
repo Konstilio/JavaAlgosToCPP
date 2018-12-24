@@ -10,7 +10,7 @@
 #define BinarySearchTree_h
 
 #include "Tree.h"
-#include <memory.h>
+#include <memory>
 #include <iostream>
 #include <exception>
 
